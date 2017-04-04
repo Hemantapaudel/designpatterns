@@ -1,4 +1,4 @@
-package obverserdesign;
+package observerdesign;
 
 public class GrabStocks {
 	public static void main(String[] args) {

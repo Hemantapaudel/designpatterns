@@ -1,4 +1,4 @@
-package obverserdesign;
+package observerdesign;
 
 public interface Subject {
 	

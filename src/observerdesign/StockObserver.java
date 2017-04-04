@@ -1,4 +1,4 @@
-package obverserdesign;
+package observerdesign;
 
 public class StockObserver implements Observer {
 

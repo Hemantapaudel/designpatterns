@@ -1,4 +1,4 @@
-package obverserdesign;
+package observerdesign;
 
 import java.util.ArrayList;
 import java.util.List;

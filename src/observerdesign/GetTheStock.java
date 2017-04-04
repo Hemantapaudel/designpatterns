@@ -1,4 +1,4 @@
-package obverserdesign;
+package observerdesign;
 
 import java.text.DecimalFormat;
 
