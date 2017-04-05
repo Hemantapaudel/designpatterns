@@ -1,11 +1,21 @@
-package observerdesign;
+package observerdesign.stockexample;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //Uses the Subject interface to update all Observers
 
-public class StockGrabber implements Subject {
+interface Subject {
+	
+	public void register(Observer o);
+
+	public void unregister(Observer o);
+
+	public void notifyObserver();
+
+}
+
+public class StockGrabberSubject implements Subject {
 
 	List<Observer> observers = new ArrayList<Observer>();
 	

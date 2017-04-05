@@ -1,8 +1,9 @@
-package observerdesign;
+package observerdesign.stockexample;
 
-public class GrabStocks {
+
+public class GrabStocksExample {
 	public static void main(String[] args) {
-		StockGrabber stockGrabber = new StockGrabber();
+		StockGrabberSubject stockGrabber = new StockGrabberSubject();
 		StockObserver observer1 = new StockObserver(stockGrabber);
 		stockGrabber.setIbmPrice(197.00);
 		stockGrabber.setAaplPrice(677.60);
@@ -20,16 +21,6 @@ public class GrabStocks {
 		stockGrabber.setAaplPrice(677.60);
 		stockGrabber.setGoogPrice(676.40);
 
-		System.out.println(" using multithread ");
-
-		Runnable getIBM = new GetTheStock(stockGrabber, 2, "IBM", 197.00);
-		Runnable getAAPL = new GetTheStock(stockGrabber, 2, "AAPL", 677.60);
-		Runnable getGOOG = new GetTheStock(stockGrabber, 2, "GOOG", 676.40);
-
-		// Call for the code in run to execute
-		new Thread(getIBM).start();
-		new Thread(getAAPL).start();
-		new Thread(getGOOG).start();
 
 	}
 

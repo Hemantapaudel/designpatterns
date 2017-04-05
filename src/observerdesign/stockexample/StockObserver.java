@@ -1,4 +1,10 @@
-package observerdesign;
+package observerdesign.stockexample;
+
+
+interface Observer {
+	public void update(double ibmPrice, double aaplPrice, double googPrice);
+}
+
 
 public class StockObserver implements Observer {
 
