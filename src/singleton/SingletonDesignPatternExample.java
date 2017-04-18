@@ -79,9 +79,24 @@ class BillPughSingleton {
 	}
 }
 
+
+/**
+ * 
+ * singleton using enum
+ */
+enum EnumSingleton {
+
+    INSTANCE;
+    
+    public  void doSomething(){
+        System.out.println("singleton method call");
+    }
+}
 public class SingletonDesignPatternExample {
 	public static void main(String[] args) {
 
+		EnumSingleton.INSTANCE.doSomething();
+		
 	}
 
 }
