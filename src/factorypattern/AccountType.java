@@ -1,4 +1,4 @@
-package factorypattern.constant;
+package factorypattern;
 
 public enum AccountType {
 	

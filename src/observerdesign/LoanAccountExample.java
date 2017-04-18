@@ -1,4 +1,4 @@
-package observerdesign.loanexample;
+package observerdesign;
 
 import java.util.ArrayList;
 
