@@ -79,6 +79,7 @@ public class BuilderDesignpattern {
         .setBluetoothEnabled(true)
 		.setGraphicsCardEnabled(true)
 		.build();
+        System.out.println(comp);
 
 	}
 
