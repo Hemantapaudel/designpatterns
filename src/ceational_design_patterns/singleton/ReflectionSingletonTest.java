@@ -1,4 +1,4 @@
-package singleton;
+package ceational_design_patterns.singleton;
 
 import java.lang.reflect.Constructor;
 

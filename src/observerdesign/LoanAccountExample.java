@@ -2,20 +2,20 @@ package observerdesign;
 
 import java.util.ArrayList;
 
-interface Observer {
+interface Observer1 {
 	public void update(float interest);
 }
 
-interface Subject {
-	public void registerObserver(Observer observer);
+interface Subject1 {
+	public void registerObserver(Observer1 observer);
 
-	public void removeObserver(Observer observer);
+	public void removeObserver(Observer1 observer);
 
 	public void notifyObservers();
 }
 
-class Loan implements Subject {
-	private ArrayList<Observer> observers = new ArrayList<Observer>();
+class Loan implements Subject1 {
+	private ArrayList<Observer1> observers = new ArrayList<Observer1>();
 	private String type;
 	private float interest;
 	private String bank;
@@ -44,13 +44,13 @@ class Loan implements Subject {
 	}
 
 	@Override
-	public void registerObserver(Observer observer) {
+	public void registerObserver(Observer1 observer) {
 		observers.add(observer);
 
 	}
 
 	@Override
-	public void removeObserver(Observer observer) {
+	public void removeObserver(Observer1 observer) {
 		observers.remove(observer);
 
 	}
@@ -63,7 +63,7 @@ class Loan implements Subject {
 	}
 }
 
-class Newspaper implements Observer {
+class Newspaper implements Observer1 {
 	@Override
 	public void update(float interest) {
 		System.out.println("Newspaper: Interest Rate updated, new Rate is: "
@@ -71,7 +71,7 @@ class Newspaper implements Observer {
 	}
 }
 
-class Internet implements Observer {
+class Internet implements Observer1 {
 	@Override
 	public void update(float interest) {
 		System.out.println("Internet: Interest Rate updated, new Rate is: "

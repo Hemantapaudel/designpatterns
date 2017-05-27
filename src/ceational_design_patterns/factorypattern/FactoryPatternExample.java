@@ -1,4 +1,4 @@
-package factorypattern;
+package ceational_design_patterns.factorypattern;
 
 public class FactoryPatternExample {
 	public static void main(String[] args) {

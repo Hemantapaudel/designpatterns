@@ -1,4 +1,4 @@
-package singleton;
+package ceational_design_patterns.singleton;
 
 /**
  * Static block initialization implementation is similar to eager

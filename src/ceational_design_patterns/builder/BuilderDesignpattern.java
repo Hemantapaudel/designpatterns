@@ -1,4 +1,4 @@
-package builder;
+package ceational_design_patterns.builder;
 
 class Computer {
 	

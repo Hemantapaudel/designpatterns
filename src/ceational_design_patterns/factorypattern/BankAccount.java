@@ -1,4 +1,4 @@
-package factorypattern;
+package ceational_design_patterns.factorypattern;
 
 public class BankAccount implements Account {
 	 private String accountNumber ;
