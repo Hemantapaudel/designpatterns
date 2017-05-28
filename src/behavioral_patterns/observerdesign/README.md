@@ -1,4 +1,2 @@
-
-
-# Obverser design Pattern:
+# Observer design Pattern:
 The Observer pattern is a software design pattern in which an object, called the subject (Publisher), maintains a list of its dependents, called observers (Subscribers), and notifies them automatically of any state changes, usually by calling one of their methods.
