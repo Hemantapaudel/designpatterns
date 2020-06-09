@@ -1,6 +1,6 @@
 package ceational_design_patterns.prototype;
 
-interface Prototype {
+interface Prototype extends Cloneable {
 	public abstract Object prototype ( )throws CloneNotSupportedException;
 }
 

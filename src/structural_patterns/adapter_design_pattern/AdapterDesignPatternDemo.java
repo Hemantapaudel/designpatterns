@@ -91,6 +91,7 @@ interface Target{
 class EmployeeAdapter implements Target{
 
 	private ThirdPartyBillingSystem thirdPartyBillingSystem = new ThirdPartyBillingSystem();
+
 	@Override
 	public void processCompanySalary(String[][] employees) {
 			
@@ -104,8 +105,6 @@ class EmployeeAdapter implements Target{
 	}
 	
 }
-	
-
 
 
 public class AdapterDesignPatternDemo {

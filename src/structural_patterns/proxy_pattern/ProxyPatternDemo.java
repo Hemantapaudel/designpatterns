@@ -14,19 +14,19 @@ interface CommandExecutor {
 	public void runCommand(String cmd) throws Exception;
 }
 
-//REAL IMPLEMANTATION (REMOTE OBJECT)
+//REAL implementation (REMOTE OBJECT)
 class CommandExecutorImpl implements CommandExecutor {
 
 	@Override
 	public void runCommand(String cmd) throws IOException {
                 //some heavy implementation
-		Runtime.getRuntime().exec(cmd);
+		System.out.println(Runtime.getRuntime().exec(cmd));
 		System.out.println("'" + cmd + "' command executed.");
 	}
 
 }
 
-// LOCAL IMPLEMANTATION OR PROXY IMPLEMENTATION
+// LOCAL Implementation OR PROXY IMPLEMENTATION
 /**
  * Now we want to provide only admin users to have full access of above class, if the user is not admin then only limited commands
  * will be allowed. Here is our very simple proxy class implementation.
@@ -40,7 +40,9 @@ class CommandExecutorProxy implements CommandExecutor {
 	private CommandExecutor executor;
 	
 	public CommandExecutorProxy(String user, String pwd){
-		if("HPAUDEL".equals(user) && "PAUDEL".equals(pwd)) isAdmin=true;
+		if("HPAUDEL".equals(user) && "PAUDEL".equals(pwd)){
+			isAdmin=true;
+		}
 		executor = new CommandExecutorImpl();
 	}
 	
@@ -61,10 +63,10 @@ class CommandExecutorProxy implements CommandExecutor {
 
 public class ProxyPatternDemo {
 	public static void main(String[] args) {
-		CommandExecutor executor = new CommandExecutorProxy("HPAUDEL", "PAUDE");
+		CommandExecutor executor = new CommandExecutorProxy("HPAUDEL", "PAUDEL");
 		try {
 			//executor.runCommand("ls -ltr");
-			executor.runCommand("rm -rf abc.pdf");
+			executor.runCommand("ls -ltr");
 		} catch (Exception e) {
 			System.out.println("Exception Message::"+e.getMessage());
 		}

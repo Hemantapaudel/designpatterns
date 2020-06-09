@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * The problem with above serialized singleton class is that whenever we deserialize it,
- *  it will create a new instance of the class. Let’s see it with a simple program.
+ *  it will create a new instance of the class. Letï¿½s see it with a simple program.
  *
  */
 class SerializedSingleton implements Serializable{
@@ -44,7 +44,8 @@ class SerializedSingleton implements Serializable{
 public class SerializationOnSingleton {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-		SerializedSingleton instanceOne = SerializedSingleton.getInstance();
+
+	    SerializedSingleton instanceOne = SerializedSingleton.getInstance();
         ObjectOutput out = new ObjectOutputStream(new FileOutputStream("filename.ser"));
         out.writeObject(instanceOne);
         out.close();

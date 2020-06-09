@@ -1,6 +1,7 @@
 package behavioral_patterns.template;
 
 abstract class HouseTemplate {
+
 	//template method, final so subclasses can't override
 	public final void buildHouse(){
 		buildFoundation();

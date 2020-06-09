@@ -1,14 +1,14 @@
 package structural_patterns.decorator_pattern;
 
 interface Pizza{
-	public String makePizza();
+	 String makePizza();
 }
 
 class PlainPizza implements Pizza{
 
 	@Override
 	public String makePizza() {
-		return "plain pizza";
+		return "plain pizza : ";
 	}
 	
 }
@@ -26,36 +26,48 @@ abstract class PizzaDecorator implements Pizza{
 	
 	@Override
 	public String makePizza() {
-		// TODO Auto-generated method stub
 		return pizza.makePizza();
 	}
 }
 
 // Adding new functionality on pizza
+class VegPizza extends PizzaDecorator{
 
-
-class VegCheesPiza extends PizzaDecorator{
-
-	public VegCheesPiza(Pizza pizza) {
+	public VegPizza(Pizza pizza) {
 		super(pizza);
 	}
 	
 	@Override
 	public String makePizza() {
-		return pizza.makePizza()+ ", Veggie  and Cheese";
+		return pizza.makePizza()+ "+ Veggie ";
 	}
 	
 }
 
-class ChickenCheesPiza extends PizzaDecorator{
+// Adding new functionality on pizza
+class CheesePizza extends PizzaDecorator{
 
-	public ChickenCheesPiza(Pizza pizza) {
+	public CheesePizza(Pizza pizza) {
+		super(pizza);
+	}
+
+	@Override
+	public String makePizza() {
+		return pizza.makePizza()+ "+ Cheese ";
+	}
+
+}
+
+// Adding new functionality on pizza
+class ChickenPizza extends PizzaDecorator{
+
+	public ChickenPizza(Pizza pizza) {
 		super(pizza);
 	}
 	
 	@Override
 	public String makePizza() {
-		return pizza.makePizza()+ ", Chicken and Cheese";
+		return pizza.makePizza()+ "+ Chicken ";
 	}
 }
 
@@ -65,9 +77,12 @@ public class DecoratorDesignPatternDemo {
 
 	public static void main(String[] args) {
 
-		Pizza pizza = new ChickenCheesPiza( new VegCheesPiza(new PlainPizza()));
-		System.out.println(pizza.makePizza());
-		
+		PlainPizza plainPizza = new PlainPizza();
+		VegPizza vegPlanPizza = new VegPizza(plainPizza);
+		CheesePizza cheesevegPizza = new CheesePizza(vegPlanPizza);
+		ChickenPizza chickenCheesevegPizza = new ChickenPizza(cheesevegPizza);
+		System.out.println(chickenCheesevegPizza.makePizza());
+
 	}
 
 }

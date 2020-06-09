@@ -16,7 +16,7 @@ class StaticBlockSingleton {
 			instance = new StaticBlockSingleton();
 		} catch (Exception e) {
 			throw new RuntimeException(
-					"Exception occured in creating singleton instance");
+					"Exception occurred in creating singleton instance");
 		}
 	}
 
@@ -89,7 +89,7 @@ enum EnumSingleton {
     INSTANCE;
     
     public  void doSomething(){
-        System.out.println("singleton method call");
+        System.out.println("singleton method call"+this);
     }
 }
 public class SingletonDesignPatternExample {

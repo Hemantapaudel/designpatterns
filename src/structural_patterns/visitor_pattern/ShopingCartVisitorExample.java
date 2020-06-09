@@ -86,11 +86,11 @@ class CD implements Visitable {
 
 
 interface Visitor {
-	public void visit(Book book);
+	 void visit(Book book);
 
-	public void visit(CD cd);
+	 void visit(CD cd);
 
-	public void visit(DVD dvd);
+	 void visit(DVD dvd);
 }
 
 class PostageVisitor implements Visitor{

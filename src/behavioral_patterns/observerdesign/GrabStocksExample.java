@@ -101,7 +101,9 @@ class StockObserver implements Observer {
 public class GrabStocksExample {
 	public static void main(String[] args) {
 		StockGrabberSubject stockGrabber = new StockGrabberSubject();
+
 		StockObserver observer1 = new StockObserver(stockGrabber);
+
 		stockGrabber.setIbmPrice(197.00);
 		stockGrabber.setAaplPrice(677.60);
 		stockGrabber.setGoogPrice(676.40);
