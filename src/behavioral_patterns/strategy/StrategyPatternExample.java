@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 interface PaymentStrategy {
-	public void pay(int amount);
+
+	void pay(int amount);
+
 }
+
 
 class CreditCardStrategy implements PaymentStrategy {
 

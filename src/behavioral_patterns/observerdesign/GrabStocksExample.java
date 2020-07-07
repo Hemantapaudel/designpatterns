@@ -7,17 +7,17 @@ import java.util.List;
 
 interface Subject {
 	
-	public void register(Observer o);
+	 void register(Observer o);
 
-	public void unregister(Observer o);
+	 void unregister(Observer o);
 
-	public void notifyObserver();
+	 void notifyObserver();
 
 }
 
 // observer interface
 interface Observer {
-	public void update(double ibmPrice, double aaplPrice, double googPrice);
+	 void update(double ibmPrice, double aaplPrice, double googPrice);
 	
 }
 

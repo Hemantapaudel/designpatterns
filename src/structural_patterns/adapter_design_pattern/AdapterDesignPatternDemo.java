@@ -109,8 +109,10 @@ class EmployeeAdapter implements Target{
 
 public class AdapterDesignPatternDemo {
 	public static void main(String[] args) {
+
 		EmployeeAdapter employeeAdapter = new EmployeeAdapter();
-		String [][] employees = HumanResourceSystem.getEmployess(); 
+		String [][] employees = HumanResourceSystem.getEmployess();
+
 		employeeAdapter.processCompanySalary(employees);
 		
 	}
